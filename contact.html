@@ -10,17 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="user.png">
   <link rel="stylesheet" href="style.css">
+  <script src="navigation.js" defer></script>
 </head>
 <body>
   <div class="site-shell">
-    <aside class="sidebar">
-      <a class="identity" href="index.html" aria-label="Jessie Mark G. Baronda home"><img src="prof.jpg" alt="Jessie Mark G. Baronda"><span><strong>Jessie Mark G. Baronda</strong><small>Full-stack Developer</small></span></a>
-      <p class="nav-label">Portfolio</p>
-      <nav class="side-nav" aria-label="Main navigation">
-        <a href="index.html"><span>01</span>Home</a><a href="experience.html"><span>02</span>Experience</a><a href="projects.html"><span>03</span>Projects</a><a href="tech-stack.html"><span>04</span>Tech Stack</a><a class="active" href="contact.html" aria-current="page"><span>05</span>Contact</a>
-      </nav>
-      <div class="sidebar-footer"><p class="nav-label">Connect</p><a href="mailto:jmbaronda06@gmail.com">Email</a><a href="https://github.com/jessiemark06" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/jessie-mark-baronda-596703365/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><small>© 2026 Jessie Mark G. Baronda</small></div>
-    </aside>
+    <div id="site-sidebar" aria-busy="true"></div>
     <main class="page-main">
       <header class="page-heading"><p class="eyebrow">Portfolio / Contact</p><p class="availability"><span></span> Open to opportunities</p></header>
       <section class="inner-page" aria-labelledby="page-title">

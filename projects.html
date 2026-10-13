@@ -10,17 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="user.png">
   <link rel="stylesheet" href="style.css">
+  <script src="navigation.js" defer></script>
 </head>
 <body>
   <div class="site-shell">
-    <aside class="sidebar">
-      <a class="identity" href="index.html" aria-label="Jessie Mark G. Baronda home"><img src="prof.jpg" alt="Jessie Mark G. Baronda"><span><strong>Jessie Mark G. Baronda</strong><small>Full-stack Developer</small></span></a>
-      <p class="nav-label">Portfolio</p>
-      <nav class="side-nav" aria-label="Main navigation">
-        <a href="index.html"><span>01</span>Home</a><a href="experience.html"><span>02</span>Experience</a><a class="active" href="projects.html" aria-current="page"><span>03</span>Projects</a><a href="tech-stack.html"><span>04</span>Tech Stack</a><a href="contact.html"><span>05</span>Contact</a>
-      </nav>
-      <div class="sidebar-footer"><p class="nav-label">Connect</p><a href="mailto:jmbaronda06@gmail.com">Email</a><a href="https://github.com/jessiemark06" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/jessie-mark-baronda-596703365/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><small>© 2026 Jessie Mark G. Baronda</small></div>
-    </aside>
+    <div id="site-sidebar" aria-busy="true"></div>
     <main class="page-main">
       <header class="page-heading"><p class="eyebrow">Portfolio / Projects</p><p class="availability"><span></span> Open to opportunities</p></header>
       <section class="inner-page" id="projects" aria-labelledby="page-title">
@@ -39,29 +33,10 @@
         </div>
       </section>
       <footer class="page-footer"><span>Jessie Mark G. Baronda</span><a href="contact.html">Start a conversation <span aria-hidden="true">→</span></a></footer>
+      <div class="lightbox" id="certificate-portfolio" aria-label="AuditPal Portal certificate preview"><a class="lightbox-backdrop" href="#project-auditpal" aria-label="Close certificate preview"></a><div class="lightbox-card"><a class="lightbox-close" href="#project-auditpal" aria-label="Close certificate preview">&times;</a><img src="cert1.PNG" alt="AuditPal Portal certificate"><p>Certificate of Appreciation</p></div></div>
+      <div class="lightbox" id="certificate-landing" aria-label="Pet Management System certificate preview"><a class="lightbox-backdrop" href="#project-pet-management" aria-label="Close certificate preview"></a><div class="lightbox-card"><a class="lightbox-close" href="#project-pet-management" aria-label="Close certificate preview">&times;</a><img src="cert2.PNG" alt="Pet Management System certificate"><p>Pet Management System Image</p></div></div>
+      <div class="lightbox" id="certificate-jobtrack" aria-label="JobTrack certificate preview"><a class="lightbox-backdrop" href="#project-jobtrack" aria-label="Close certificate preview"></a><div class="lightbox-card"><a class="lightbox-close" href="#project-jobtrack" aria-label="Close certificate preview">&times;</a><img src="cert3.PNG" alt="JobTrack certificate"><p>JobTrack Image</p></div></div>
     </main>
   </div>
-  <div class="lightbox" id="certificate-portfolio" aria-label="AuditPal Portal certificate preview"><a class="lightbox-backdrop" href="#project-auditpal" aria-label="Close certificate preview"></a><div class="lightbox-card"><a class="lightbox-close" href="#project-auditpal" aria-label="Close certificate preview">&times;</a><img src="cert1.PNG" alt="AuditPal Portal certificate"><p>Certificate of Appreciation</p></div></div>
-  <div class="lightbox" id="certificate-landing" aria-label="Pet Management System certificate preview"><a class="lightbox-backdrop" href="#project-pet-management" aria-label="Close certificate preview"></a><div class="lightbox-card"><a class="lightbox-close" href="#project-pet-management" aria-label="Close certificate preview">&times;</a><img src="cert2.PNG" alt="Pet Management System certificate"><p>Pet Management System Image</p></div></div>
-  <div class="lightbox" id="certificate-jobtrack" aria-label="JobTrack certificate preview"><a class="lightbox-backdrop" href="#project-jobtrack" aria-label="Close certificate preview"></a><div class="lightbox-card"><a class="lightbox-close" href="#project-jobtrack" aria-label="Close certificate preview">&times;</a><img src="cert3.PNG" alt="JobTrack certificate"><p>JobTrack Image</p></div></div>
-  <script>
-    let certificateScrollPosition = 0;
-
-    document.querySelectorAll('.project-actions a[href^="#certificate-"]').forEach((trigger) => {
-      trigger.addEventListener('click', (event) => {
-        event.preventDefault();
-        certificateScrollPosition = window.scrollY;
-        document.querySelector(trigger.getAttribute('href'))?.classList.add('is-open');
-      });
-    });
-
-    document.querySelectorAll('.lightbox-backdrop, .lightbox-close').forEach((closeLink) => {
-      closeLink.addEventListener('click', (event) => {
-        event.preventDefault();
-        closeLink.closest('.lightbox').classList.remove('is-open');
-        window.scrollTo(0, certificateScrollPosition);
-      });
-    });
-  </script>
 </body>
 </html>
