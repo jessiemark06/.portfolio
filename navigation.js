@@ -38,10 +38,18 @@ function updateActiveNavigation() {
   });
 }
 
+function moveLightboxesToBody(container) {
+  container.querySelectorAll('.lightbox').forEach((lightbox) => {
+    document.body.append(lightbox);
+  });
+}
+
 function updatePageContent(nextMain, nextTitle, nextDescription) {
+  document.querySelectorAll('.lightbox').forEach((lightbox) => lightbox.remove());
   pageMain.classList.remove('is-entering');
   void pageMain.offsetWidth;
   pageMain.innerHTML = nextMain.innerHTML;
+  moveLightboxesToBody(pageMain);
   pageMain.classList.add('is-entering');
   document.title = nextTitle;
 
@@ -140,4 +148,5 @@ window.addEventListener('popstate', () => {
   navigateTo(new URL(window.location.href), false);
 });
 
+moveLightboxesToBody(document);
 loadSidebar();
