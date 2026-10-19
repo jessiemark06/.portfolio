@@ -69,6 +69,7 @@ function updatePageContent(nextMain, nextTitle, nextDescription) {
     description.content = nextDescription;
   }
 
+  applyTheme(document.documentElement.dataset.theme);
   updateActiveNavigation();
   window.scrollTo(0, 0);
 }
