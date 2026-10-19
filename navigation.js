@@ -4,6 +4,16 @@ let sidebarLoaded = false;
 let certificateScrollPosition = 0;
 let navigationController;
 
+function applyTheme(theme) {
+  const isDark = theme === 'dark';
+  document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
+
+  document.querySelectorAll('.theme-toggle').forEach((themeToggle) => {
+    themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+  });
+}
+
 async function loadSidebar() {
   try {
     const response = await fetch('sidebar.html');
@@ -15,6 +25,7 @@ async function loadSidebar() {
     sidebarLoaded = true;
     sidebar.setAttribute('aria-busy', 'false');
     updateActiveNavigation();
+    applyTheme(document.documentElement.dataset.theme);
   } catch (error) {
     console.error('Unable to load the portfolio sidebar.', error);
     sidebar.setAttribute('aria-busy', 'false');
@@ -110,6 +121,14 @@ document.addEventListener('click', (event) => {
     return;
   }
 
+  const themeToggle = event.target.closest('.theme-toggle');
+  if (themeToggle) {
+    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('portfolio-theme', nextTheme);
+    applyTheme(nextTheme);
+    return;
+  }
+
   const link = event.target.closest('a');
   if (!link) {
     return;
@@ -149,4 +168,5 @@ window.addEventListener('popstate', () => {
 });
 
 moveLightboxesToBody(document);
+applyTheme(localStorage.getItem('portfolio-theme') || 'light');
 loadSidebar();
