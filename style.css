@@ -893,6 +893,44 @@ h3 {
   line-height: 1.8;
 }
 
+.education-entry {
+  margin-bottom: 24px;
+}
+
+.about-copy .section-label {
+  margin-bottom: 10px;
+  color: var(--body-muted);
+  font-weight: 700;
+}
+
+.education-course-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.education-course-row h3 {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: var(--body-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.education-date {
+  margin-left: auto;
+  color: var(--body-muted);
+  font-size: 0.90rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.about-copy .education-school {
+  margin: 2px 0 0;
+}
+
 .inline-link {
   display: inline-flex;
   gap: 10px;
@@ -1217,6 +1255,15 @@ h3 {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 38px 0 44px;
+  }
+
+  .education-course-row {
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+
+  .education-course-row h3 {
+    flex: 1 1 250px;
   }
 
   .inner-page {
