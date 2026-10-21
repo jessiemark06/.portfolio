@@ -20,6 +20,7 @@
   --tag-border: #e5ebe6;
   --tag-text: #4e5d55;
   --availability-ring: #e8f5ed;
+  --preview-bg: #e2eee7;
 }
 
 :root[data-theme="dark"] {
@@ -45,6 +46,7 @@
   --tag-border: #35443b;
   --tag-text: #c7d2cb;
   --availability-ring: #263a30;
+  --preview-bg: #24382f;
 }
 
 :root[data-theme="light"] {
@@ -403,7 +405,7 @@ h3 {
   z-index: 1;
   width: min(760px, 100%);
   padding: 18px;
-  background: var(--panel);
+  background: var(--preview-bg);
   border: 1px solid var(--line);
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
 }
