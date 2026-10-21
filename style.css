@@ -1,29 +1,4 @@
 :root {
-  --bg: #f5f7f6;
-  --panel: #ffffff;
-  --panel-soft: #f4f7f5;
-  --text: #202a27;
-  --muted: #697570;
-  --line: #e3e9e5;
-  --accent: #26735b;
-  --blue: #26735b;
-  --accent-contrast: #ffffff;
-  --heading: #202a27;
-  --body-muted: #68756f;
-  --subtle: #87918b;
-  --link: #35423b;
-  --nav-text: #55615b;
-  --nav-muted: #9aa59f;
-  --nav-active: #225e49;
-  --nav-active-bg: #edf5f0;
-  --tag-bg: #f6f8f6;
-  --tag-border: #e5ebe6;
-  --tag-text: #4e5d55;
-  --availability-ring: #e8f5ed;
-  --preview-bg: #e2eee7;
-}
-
-:root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #101715;
   --panel: #171f1c;
@@ -51,6 +26,28 @@
 
 :root[data-theme="light"] {
   color-scheme: light;
+  --bg: #f5f7f6;
+  --panel: #ffffff;
+  --panel-soft: #f4f7f5;
+  --text: #202a27;
+  --muted: #697570;
+  --line: #e3e9e5;
+  --accent: #26735b;
+  --blue: #26735b;
+  --accent-contrast: #ffffff;
+  --heading: #202a27;
+  --body-muted: #68756f;
+  --subtle: #87918b;
+  --link: #35423b;
+  --nav-text: #55615b;
+  --nav-muted: #9aa59f;
+  --nav-active: #225e49;
+  --nav-active-bg: #edf5f0;
+  --tag-bg: #f6f8f6;
+  --tag-border: #e5ebe6;
+  --tag-text: #4e5d55;
+  --availability-ring: #e8f5ed;
+  --preview-bg: #e2eee7;
 }
 
 * {
@@ -905,6 +902,10 @@ h3 {
   font-weight: 700;
 }
 
+:root:not([data-theme="light"]) .about-copy .section-label {
+  color: #fff;
+}
+
 .education-course-row {
   display: flex;
   align-items: baseline;
@@ -1071,11 +1072,42 @@ h3 {
 
 .project-stack {
   display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 8px;
 }
 
 .project-stack .eyebrow {
+  grid-column: 1 / -1;
+}
+
+.inner-page .project-stack .project-actions {
+  grid-column: 2;
+  align-self: start;
+  justify-self: end;
+  margin-top: 0;
+}
+
+.project-stack .tags {
+  grid-column: 1;
+}
+
+.project-stack .eyebrow {
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  .project-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .project-stack .tags,
+  .inner-page .project-stack .project-actions {
+    grid-column: 1;
+  }
+
+  .inner-page .project-stack .project-actions {
+    justify-self: start;
+  }
 }
 
 .inner-page .project-item:hover {

@@ -169,5 +169,5 @@ window.addEventListener('popstate', () => {
 });
 
 moveLightboxesToBody(document);
-applyTheme(localStorage.getItem('portfolio-theme') || 'light');
+applyTheme(localStorage.getItem('portfolio-theme') || 'dark');
 loadSidebar();
