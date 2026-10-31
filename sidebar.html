@@ -1,22 +1,29 @@
 <aside class="sidebar">
-  <a class="identity" href="index.html" aria-label="Jessie Mark G. Baronda home">
+  <a class="identity" href="index.html#home" aria-label="Jessie Mark G. Baronda home">
     <img src="prof.jpg" alt="Jessie Mark G. Baronda">
     <span><strong>Jessie Mark G. Baronda</strong><small>Software Developer</small></span>
   </a>
-  <p class="nav-label">Portfolio</p>
-  <nav class="side-nav" aria-label="Main navigation">
-    <a href="index.html"><span>01</span>Home</a>
-    <a href="experience.html"><span>02</span>Experience</a>
-    <a href="projects.html"><span>03</span>Projects</a>
-    <a href="tech-stack.html"><span>04</span>Tech Stack</a>
-    <a href="contact.html"><span>05</span>Contact</a>
-  </nav>
-  <div class="sidebar-footer">
-    <p class="nav-label">Connect</p>
-    <a href="mailto:jmbaronda06@gmail.com">Email</a>
-    <a href="https://github.com/jessiemark06" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-    <a href="https://www.linkedin.com/in/jessie-mark-baronda-596703365/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-    <a href="https://www.facebook.com/jessiemark.gualinbaronda.7" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
-    <small>© 2026 Jessie Mark G. Baronda</small>
+  <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="nav-panel" aria-expanded="false">
+    <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+  </button>
+  <button class="menu-backdrop" type="button" aria-label="Close navigation menu" tabindex="-1"></button>
+  <div class="nav-panel" id="nav-panel">
+    <div class="nav-panel-header">
+      <a class="nav-profile" href="index.html#home" aria-label="Jessie Mark G. Baronda home">
+        <img src="prof.jpg" alt="">
+        <span><strong>Jessie Mark G. Baronda</strong><small>Software Developer</small></span>
+      </a>
+    </div>
+    <nav class="side-nav" aria-label="Main navigation">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#tech-stack">Tech Stack</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav-tools">
+      <p class="availability"><span></span> Open to opportunities</p>
+      <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true"><span aria-hidden="true"></span></button>
+    </div>
   </div>
 </aside>

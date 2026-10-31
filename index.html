@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Jessie Mark G. Baronda | Portfolio</title>
   <meta name="description" content="The portfolio of Jessie Mark G. Baronda, full-stack web developer.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,23 +17,29 @@
     <div id="site-sidebar" aria-busy="true"></div>
     <main class="page-main">
       <header class="page-heading">
-        <p class="eyebrow">Portfolio / Home</p>
-        <div class="heading-tools">
-          <p class="availability"><span></span> Open to opportunities</p>
-          <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true"><span aria-hidden="true"></span></button>
-        </div>
+        <p class="eyebrow">Portfolio</p>
       </header>
-      <section class="home-hero" aria-labelledby="page-title">
-        <p class="hero-kicker">Hello, I'm Jessie Mark</p>
-      <h1 id="page-title">I build, learn, and create.</h1>
-        <p class="hero-copy">Software Developer focused on creating responsive web apps and practical applications, from the first interface to the backend that powers it.</p>
-        <div class="hero-actions">
-          <a class="primary-link" href="projects.html">Explore Projects</a>
-          <a class="primary-link" href="Baronda_Resume.pdf" download>Download Resume</a>
+      <section class="home-hero" id="home" data-nav-section aria-labelledby="page-title">
+        <div class="hero-content">
+          <p class="hero-kicker">Hello, I'm Jessie Mark</p>
+          <h1 id="page-title">I build, learn, and create.</h1>
+          <p class="hero-copy">Software Developer focused on creating responsive web apps and practical applications, from the first interface to the backend that powers it.</p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#projects">Explore Projects <span aria-hidden="true">→</span></a>
+            <a class="secondary-link" href="Baronda_Resume.pdf" download>Download Resume <span aria-hidden="true">↓</span></a>
+          </div>
         </div>
-        </section>
+        <figure class="hero-portrait">
+          <img src="prof.jpg" alt="Jessie Mark G. Baronda">
+          <figcaption>
+            <span>My approach</span>
+            <strong>Thoughtful, practical solutions.</strong>
+            <small>Frontend · Backend · Product thinking</small>
+          </figcaption>
+        </figure>
+      </section>
 
-      <section class="about-section" aria-labelledby="about-title">
+      <section class="about-section" id="about" data-nav-section aria-labelledby="about-title">
         <div class="section-heading"><p class="eyebrow">A little about me</p><h2 id="about-title">Building with purpose.</h2></div>
         <div class="about-copy">
           <p class="section-label">Background</p>
@@ -47,10 +53,62 @@
             </div>
             <p class="education-school">Cavite State University - General Trias City Campus</p>
           </div>
-          <a class="inline-link" href="experience.html">More about my experience <span aria-hidden="true">→</span></a>
         </div>
       </section>
-      <footer class="page-footer"><span>Jessie Mark G. Baronda</span><a href="contact.html">Start a conversation <span aria-hidden="true">→</span></a></footer>
+      <section class="inner-page portfolio-section" id="experience" data-nav-section aria-labelledby="experience-title">
+        <p class="eyebrow">Where I've learned and built</p>
+        <h2 class="portfolio-section-title" id="experience-title">Experience</h2>
+        <p class="page-intro">A mix of hands-on development, collaborative projects, and independent work that continues to shape how I build for the web.</p>
+        <div class="timeline">
+          <article class="timeline-item"><span>Feb 2026 – May 2026</span><div><h2>On-the-Job Training</h2><p class="timeline-meta">Innovative Thinker Software Solutions Corporation</p><ul><li>Collaborated with the development team in building and improving features for a web-based application.</li><li>Assisted with frontend and backend development, database-related tasks, and system integration.</li><li>Helped test and refine application features based on team feedback.</li></ul></div></article>
+          <article class="timeline-item"><span>Nov 2025 – Feb 2026</span><div><h2>Capstone / Thesis</h2><p class="timeline-meta">Cavite State University</p><ul><li>Collaborated with team members during the planning and design of the system based on the client's requirements.</li><li>Primarily handled the programming and development of the system, including frontend, backend, database, and core features.</li><li>Tested and refined the system based on user feedback and project requirements.</li></ul></div></article>
+          <article class="timeline-item"><span>Aug 2023 – Sept 2026</span><div><h2>Freelance Web Developer</h2><p class="timeline-meta">Self-employed</p><ul><li>Developed websites, web applications, and prototypes based on client and project requirements.</li><li>Communicated with clients to understand their needs and made adjustments based on their feedback.</li><li>Continuously learned and applied new web development technologies while improving existing projects.</li></ul></div></article>
+        </div>
+      </section>
+
+      <section class="inner-page portfolio-section" id="projects" data-nav-section aria-labelledby="projects-title">
+        <p class="eyebrow">Selected work</p>
+        <h2 class="portfolio-section-title" id="projects-title">Projects</h2>
+        <p class="page-intro">Web applications designed to solve practical problems, improve everyday workflows, and make information easier to manage.</p>
+        <div class="project-list">
+          <article class="project-item" id="project-auditpal"><div class="project-heading"><strong>AuditPal Portal</strong><p class="project-context">On-the-Job Training Project</p></div><span>Web app management system designed to streamline the tracking and management of organizational activities, cash advances, requests for payment (RFPs), liquidations, and other financial and administrative records.</span><div class="project-stack"><p class="eyebrow">Tech stack</p><div class="tags"><span>C#</span><span>ASP.NET</span><span>HTML</span><span>Tailwind CSS</span><span>JavaScript</span><span>MS SQL</span><span>Azure</span><span>Git</span></div><div class="project-actions"><a href="#certificate-portfolio" class="label label-certificate">View image</a></div></div></article>
+          <article class="project-item" id="project-pet-management"><div class="project-heading"><strong>Pet Management System for Juan Veterinarian Animal Clinic</strong><p class="project-context">Capstone Project</p></div><span>A web app system designed to manage pet records, customer information, appointments, and veterinary services efficiently. The system also provides customers with updates regarding their appointments and other clinic-related information, helping improve communication between the clinic and its customers.</span><div class="project-stack"><p class="eyebrow">Tech stack</p><div class="tags"><span>PHP</span><span>HTML</span><span>Tailwind CSS</span><span>JavaScript</span><span>MySQL</span><span>GitHub</span></div><div class="project-actions"><a href="#certificate-landing" class="label label-certificate">View image</a></div></div></article>
+          <article class="project-item" id="project-jobtrack"><div class="project-heading"><strong>JobTrack — Job Application Tracker</strong><p class="project-context">Personal Project</p></div><span>A job web app for organizing applications and company details in one place, with status tracking to help users stay on top of each opportunity.</span><div class="project-stack"><p class="eyebrow">Tech stack</p><div class="tags"><span>React</span><span>PHP</span><span>Laravel</span><span>HTML</span><span>Tailwind CSS</span><span>MySQL</span><span>GitHub</span></div><div class="project-actions"><a href="#certificate-jobtrack" class="label label-certificate">View image</a></div></div></article>
+          <article class="project-item" id="project-study-partner"><div class="project-heading"><strong>Study Partner — AI-Powered Study Assistant</strong><p class="project-context">Personal Project</p></div><span>An AI-powered study platform that transforms uploaded documents into personalized exams, flashcards, and study notes. Users can customize exam difficulty, question types, and the number of questions before generating exams. The system also records exam history and tracks learning progress to help users monitor their improvement over time.</span><div class="project-stack"><p class="eyebrow">Tech stack</p><div class="tags"><span>HTML</span><span>Tailwind CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Groq</span><span>Google Gemini</span></div><div class="project-actions"><a href="#certificate-study-partner" class="label label-certificate">View image</a></div></div></article>
+          <article class="project-item"><div class="project-heading"><strong>Freelance Projects</strong><p class="project-context">Freelance</p></div><span>Developed web applications for clients, creating responsive interfaces and making updates based on their requirements and feedback.</span><div class="project-stack"><p class="eyebrow">Tech stack</p><div class="tags"><span>PHP</span><span>Laravel</span><span>HTML</span><span>Tailwind CSS</span><span>Bootstrap</span><span>JavaScript</span><span>Java</span><span>C#</span><span>MySQL</span><span>GitHub</span></div></div></article>
+        </div>
+      </section>
+
+      <section class="inner-page portfolio-section" id="tech-stack" data-nav-section aria-labelledby="tech-stack-title">
+        <p class="eyebrow">Tools I work with</p>
+        <h2 class="portfolio-section-title" id="tech-stack-title">Tech Stack</h2>
+        <p class="page-intro">A practical toolkit for developing responsive interfaces, full-stack applications, and data-driven solutions.</p>
+        <div class="stack-groups">
+          <article><h2>Frontend</h2><div class="tags"><span>React.js</span><span>HTML</span><span>Tailwind CSS</span><span>Bootstrap</span><span>JavaScript</span></div></article>
+          <article><h2>Backend</h2><div class="tags"><span>PHP</span><span>Laravel</span><span>C#</span><span>ASP.NET</span><span>C++</span><span>Java</span></div></article>
+          <article><h2>Database &amp; Tools</h2><div class="tags"><span>MySQL</span><span>Microsoft SQL</span></div></article>
+          <article><h2>Cloud &amp; Version Control</h2><div class="tags"><span>Microsoft Azure</span><span>GitHub</span><span>Git</span></div></article>
+        </div>
+      </section>
+
+      <section class="inner-page portfolio-section" id="contact" data-nav-section aria-labelledby="contact-title">
+        <p class="eyebrow">Have a project in mind?</p>
+        <h2 class="portfolio-section-title" id="contact-title">Let's work together.</h2>
+        <p class="page-intro">I'm open to web/software development opportunities, collaborations, and conversations about building useful digital experiences. Reach out through any of the channels below.</p>
+        <div class="contact-details">
+          <div class="contact-row"><span>Email</span><a href="mailto:jmbaronda06@gmail.com">jmbaronda06@gmail.com</a></div>
+          <div class="contact-row"><span>GitHub</span><a href="https://github.com/jessiemark06" target="_blank" rel="noreferrer">github.com/jessiemark06 ↗</a></div>
+          <div class="contact-row"><span>LinkedIn</span><a href="https://www.linkedin.com/in/jessie-mark-baronda-596703365/" target="_blank" rel="noreferrer">Jessie Mark Baronda ↗</a></div>
+          <div class="contact-row"><span>Facebook</span><a href="https://www.facebook.com/jessie.mark.gualinbaronda.7" target="_blank" rel="noopener noreferrer">Jessie Mark Gualin Baronda ↗</a></div>
+          <div class="contact-row"><span>Location</span><strong>Cavite, Philippines</strong></div>
+        </div>
+      </section>
+
+      <footer class="page-footer"><span>Jessie Mark G. Baronda · © 2026</span><a href="#home">Back to top <span aria-hidden="true">↑</span></a></footer>
+      <div class="lightbox" id="certificate-portfolio" aria-label="AuditPal Portal certificate preview"><a class="lightbox-backdrop" href="#project-auditpal" aria-label="Close certificate preview"></a><div class="lightbox-card"><a class="lightbox-close" href="#project-auditpal" aria-label="Close certificate preview">&times;</a><img src="cert1.PNG" alt="AuditPal Portal certificate"><p>Certificate of Appreciation</p></div></div>
+      <div class="lightbox" id="certificate-landing" aria-label="Pet Management System certificate preview"><a class="lightbox-backdrop" href="#project-pet-management" aria-label="Close certificate preview"></a><div class="lightbox-card"><a class="lightbox-close" href="#project-pet-management" aria-label="Close certificate preview">&times;</a><img src="cert2.PNG" alt="Pet Management System certificate"><p>Pet Management System</p></div></div>
+      <div class="lightbox" id="certificate-jobtrack" aria-label="JobTrack certificate preview"><a class="lightbox-backdrop" href="#project-jobtrack" aria-label="Close certificate preview"></a><div class="lightbox-card"><a class="lightbox-close" href="#project-jobtrack" aria-label="Close certificate preview">&times;</a><img src="cert3.PNG" alt="JobTrack certificate"><p>JobTrack</p></div></div>
+      <div class="lightbox" id="certificate-study-partner" aria-label="Study Partner project image preview"><a class="lightbox-backdrop" href="#project-study-partner" aria-label="Close image preview"></a><div class="lightbox-card"><a class="lightbox-close" href="#project-study-partner" aria-label="Close image preview">&times;</a><img src="cert4.PNG" alt="Study Partner project image"><p>Study Partner</p></div></div>
     </main>
   </div>
 </body>
