@@ -1375,6 +1375,15 @@ h3 {
   transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
 }
 
+.inner-page .stack-groups .tags span {
+  gap: 8px;
+}
+
+.inner-page .stack-groups .tags i {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
 .inner-page .tags span:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
